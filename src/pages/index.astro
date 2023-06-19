@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavElem from '../components/NavElem.astro';
+import { Image } from 'astro:assets';
+import images from "/logo.png"
+---
+
+<Layout title="Welcome to Astro.">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<section>
+		<div style="max-width: max-content; margin: auto;">
+		<div class="logo" style="margin-left: 100px;">
+			<img src={images} ></img>
+			<div class="logo-name">
+				<h2>Geethangali</h2>
+				<h3>college of engineering and technology</h3>
+				<div style="text-align: right;"><i>... Starving towards perfection</i></div>
+			</div>
+			
+		</div>
+	</div>
+		<div class="social-media">
+			<p class="d-flex align-items-center justify-content-center">
+			<a href="#" >
+				<span class="fa fa-facebook">
+					<i class="sr-only">Facebook</i>
+				</span>
+			</a>
+			<a href="#" class="d-flex align-items-center justify-content-center">
+				<span class="fa fa-twitter">
+					<i class="sr-only">Twitter</i>
+				</span>
+			</a>
+			<a href="#" class="d-flex align-items-center justify-content-center">
+				<span class="fa fa-instagram">
+					<i class="sr-only">Instagram</i>
+				</span>
+			</a>
+			<a href="#" class="d-flex align-items-center justify-content-center">
+				<span class="fa fa-youtube">
+					<i class="sr-only">Dribbble</i>
+				</span>
+			</a>
+			<a href="#" class="d-flex align-items-center justify-content-center">
+				<span class="fa fa-linkedin">
+					<i class="sr-only">Dribbble</i>
+				</span>
+			</a>
+			</p>
+			<h1 class="dept_title">DEPARTMENT OF <br>COMPUTER SCIENCE AND ENGINEERING</h1>
+		</div>
+		
+		<nav>
+			<ul>
+				<NavElem text="Home" />
+				<NavElem text="About Us" />
+				<NavElem text="Contact" />
+				<NavElem text="Programs" />
+				<NavElem text="Events" />
+				<NavElem text="Faculaty" />
+				<NavElem text="Join US" />
+			</ul>
+		</nav>
+	</section>
+	<div class="container">
+		<section class="side-nav">
+			<ul>
+				<li>Home</li>
+				<li>About Us</li>
+				<li>Contact</li>
+				<li>Programs</li>
+				<li>Events</li>
+				<li>Faculaty</li>
+				<li>Join US</li>
+			</ul>
+			<div class="social-media">
+				<p class="d-flex align-items-center justify-content-center">
+				<a href="#" >
+					<span class="fa fa-facebook">
+						<i class="sr-only">Facebook</i>
+					</span>
+				</a>
+				<a href="#" class="d-flex align-items-center justify-content-center">
+					<span class="fa fa-twitter">
+						<i class="sr-only">Twitter</i>
+					</span>
+				</a>
+				<a href="#" class="d-flex align-items-center justify-content-center">
+					<span class="fa fa-instagram">
+						<i class="sr-only">Instagram</i>
+					</span>
+				</a>
+				<a href="#" class="d-flex align-items-center justify-content-center">
+					<span class="fa fa-youtube">
+						<i class="sr-only">Dribbble</i>
+					</span>
+				</a>
+				<a href="#" class="d-flex align-items-center justify-content-center">
+					<span class="fa fa-linkedin">
+						<i class="sr-only">Dribbble</i>
+					</span>
+				</a>
+				</p>
+			</div>
+		</section>
+		<main>
+			
+			<h1>Hello World</h1>
+		</main>
+	</div>
+</Layout>
+
+<script>
+	var isOutOfViewport = function (elem) {
+
+// Get element's bounding
+var bounding = elem.getBoundingClientRect();
+
+// Check if it's out of the viewport on each side
+var out = {};
+out.top = bounding.top < 0;
+out.left = bounding.left < 0;
+out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
+out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
+out.any = out.top || out.left || out.bottom || out.right;
+out.all = out.top && out.left && out.bottom && out.right;
+return out;
+
+};
+function logViewport(){
+	let ele = document.getElementsByTagName('nav')[0];
+	let tar = document.getElementsByClassName("side-nav")[0];
+	if(isOutOfViewport(ele).any){
+		tar.style.width = "300px"
+	}else{
+		tar.style.width = "0px"
+	}
+}
+window.addEventListener('scroll', logViewport, false);
+</script>
+
+<style>
+	li{
+
+		padding: 1rem 20px 1rem 20px;
+	}
+	li:hover{
+		background-color: red;
+	}
+	.logo{
+		margin: auto;
+	}
+	.logo-name{
+		color: #e8943a;
+		font-family: logoFont;
+		font-size: 20px;
+		display: inline-block;
+	}
+	.container{
+		display: flex;
+	}
+	.side-nav{
+		background-color: #433b38;
+		color: white;
+		position: sticky;
+		top:0;
+		width: 0;
+		height: 100vh;
+		overflow: hidden;
+		transition: width 0.3s;
+		transition-timing-function: ease-in;
+	}
+	img{
+		width: 100px;
+		mix-blend-mode: multiply;
+		display: inline-block;
+		vertical-align:top;
+	}
+	a{
+		
+	}
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+		height: 1000px;
+	}
+	nav{
+		background-color: black;
+		color: white;
+
+	}
+	nav ul{
+		display: flex;
+		justify-content:center;
+	}
+	.dept_title{
+		text-align: center;
+		display: inline;
+		font-weight: 400;
+		font-family: 'Courier New', Courier, monospace;
+	}
+	
+	.social-media{
+		display: flex;
+		justify-content: space-evenly;
+	}
+	@media only screen and (max-width: 800px){
+		.social-media{
+			flex-direction: column;
+			align-items: center;
+		}
+		ul{
+			flex-direction: column;
+		}
+	}
+	.social-media p{
+		display: inline-flex;
+		align-items: center;
+	}
+	.social-media p a {
+		text-decoration: none;
+		color: #4d4d4d;
+		font-size: 15px;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		box-shadow: 0 0 2px #888;
+		padding: 0.4em 0.65em;
+		margin: 0.5em;
+	}
+
+	.social-media p a:has(.fa-youtube):hover {
+		background-color: red;
+		color:white;
+	}
+	.social-media p a:has(.fa-facebook):hover {
+		background-color: #3b5998;
+		color:white;
+	}
+	.social-media p a:has(.fa-twitter):hover {
+		background-color: #1D9BF0;
+		color:white;
+	}
+	
+	.social-media p a:has(.fa-instagram):hover {
+		background:linear-gradient(-135deg, #405de6, #5851db, #833ab4, #c13584,
+		 #e1306c, #fd1d1d,#F56040, #F77737,#FCAF45, #FFDC80, #FFDC80);
+		color:white;
+	}
+	.social-media p a:has(.fa-linkedin):hover {
+		background:#0A66C2;
+		color:white;
+	}
+	@font-face {
+		font-family: logoFont;
+		src: url('../../public/cloister_black/CloisterBlack.ttf');
+		}
+/* h1 {
+		background-color: white;
+		text-align: center;
+	} */
+</style>

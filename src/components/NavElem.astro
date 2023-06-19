@@ -1,0 +1,19 @@
+---
+export interface Props {
+	text: string
+}
+
+const { text } = Astro.props;
+---
+<li>
+    {text}
+</li>
+<style>
+    li{
+        display: inline-flex;
+        padding: 1rem 20px 1rem 20px;
+    }
+    li:hover{
+        background-color: red;
+    }
+</style>
