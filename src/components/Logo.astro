@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import images from "/logo.png"
+
+import bggcet from "../../public/bggcet.png"
+---
+<div style="max-width: max-content; margin: auto;">
+    <div class="logo" >
+        <img src={images} ></img>
+        <div class="logo-name">
+            <h2>Geethangali </h2><h2>college of engineering and technology</h2>
+            <div style="text-align: right;"><i>... Starving towards perfection</i></div>
+        </div>
+		
+    </div>
+	<!-- <div>
+		<img src={bggcet} ></img>
+	</div> -->
+</div>
+<style>
+	.img{
+		max-width: 100%;
+		display: block;
+	}
+    .logo img{
+		width: 8rem;
+		padding-right: 2rem;
+		mix-blend-mode: multiply;
+		display: inline-block;
+		vertical-align:top;
+	}
+    .logo{
+		/* height:3rem; */
+		/* background: url("/bggcet.png"); */
+		padding: 20px ;
+		margin: auto;
+		/* height: 100px;
+		line-height: 100px; */
+	}
+	.logo-name{
+		/* position: absolute; */
+		vertical-align: middle;
+		/* line-height: 1.5; */
+		color: balck;/*#e8943a;*/
+		
+		/* font-family: logoFont; */
+		font-size: 20px;
+		display: inline-block;
+	}
+</style>

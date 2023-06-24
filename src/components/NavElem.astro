@@ -5,15 +5,18 @@ export interface Props {
 
 const { text } = Astro.props;
 ---
-<li>
-    {text}
+<li class="nav-ele">
+    <a>{text}</a>
 </li>
 <style>
-    li{
+    .nav-ele a{
         display: inline-flex;
         padding: 1rem 20px 1rem 20px;
     }
-    li:hover{
+    .nav-ele {
+        list-style-type: none
+    }
+    .nav-ele a:hover{
         background-color: red;
     }
 </style>

@@ -1,24 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NavElem from '../components/NavElem.astro';
-import { Image } from 'astro:assets';
-import images from "/logo.png"
+import Logo from '../components/Logo.astro'
+import bggcet from '/images.png'
+import thinFont from '../../public/SairaCondensed-Regular.ttf'
 ---
 
 <Layout title="Welcome to Astro.">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<section>
-		<div style="max-width: max-content; margin: auto;">
-		<div class="logo" style="margin-left: 100px;">
-			<img src={images} ></img>
-			<div class="logo-name">
-				<h2>Geethangali</h2>
-				<h3>college of engineering and technology</h3>
-				<div style="text-align: right;"><i>... Starving towards perfection</i></div>
-			</div>
-			
-		</div>
-	</div>
+		
 		<div class="social-media">
 			<p class="d-flex align-items-center justify-content-center">
 			<a href="#" >
@@ -61,17 +52,21 @@ import images from "/logo.png"
 				<NavElem text="Join US" />
 			</ul>
 		</nav>
+		
+		<!-- <Logo /> -->
 	</section>
 	<div class="container">
 		<section class="side-nav">
+			<p>Department Of Computer Science and Engineering</p>
+			<hr>
 			<ul>
-				<li>Home</li>
-				<li>About Us</li>
-				<li>Contact</li>
-				<li>Programs</li>
-				<li>Events</li>
-				<li>Faculaty</li>
-				<li>Join US</li>
+				<li><a>Home</a></li>
+				<li><a>About Us</a></li>
+				<li><a>Contact</a></li>
+				<li><a>Programs</a></li>
+				<li><a>Events</a></li>
+				<li><a>Faculaty</a></li>
+				<li><a>Join US</a></li>
 			</ul>
 			<div class="social-media">
 				<p class="d-flex align-items-center justify-content-center">
@@ -104,10 +99,44 @@ import images from "/logo.png"
 			</div>
 		</section>
 		<main>
-			
-			<h1>Hello World</h1>
+			<!-- <img src={bggcet} ></img> -->
+			<Logo />
+			<p> The Department of Computer Science and Engineering was established in the year 2005 and currently the
+			 department offers an Under Graduate program B.Tech in Computer Science and Engineering with an annual 
+			 intake of 240 students and 1 Post-Graduate program M.Tech in Computer Science and Engineering with an 
+			 annual intake of 30 students.
+
+			<br>The Department is Headed by Dr. A. Sri Lakshmi is having a total experience of 21 years in Teaching
+			 and Research. Accomplished career demonstrating consistent success as an administrator and educator at
+			  the graduate and post-graduate education levels. She is an effective communicator with excellent planning,
+			   organizational, and negotiation strengths as well as the ability to lead, reach consensus, establish goals
+			    and attain results.
+
+			<br>There are 8 Professors, 15 Associate Professors, and 72 Assistant Professors
+			 and 16 doctorates in the department. The department has a Programmer and 5 System Administrators
+			  to assist and maintain the computer laboratories. All the faculty members are encouraged to participate
+			   in Faculty Development Programmes, Conferences, Workshops, Publication of Research Papers and active 
+			   involvement in R & D activity.</p>
+			   <div>
+				<dl>
+				<dh><h2>Vision and Mission</h2></dh><dd></dd>
+				<dh><h3>Vision of the Department</h3></dh>
+				<dd><p>To produce globally competent and socially responsible computer science engineers contributing to the advancement of engineering and technology which involves creativity and innovation by providing excellent learning environment with world class facilities.
+				</p></dd>
+				<dh><h3>Mission of the Department</h3></dh>
+				<dd><ol>
+				<li>To be a centre of excellence in instruction, innovation in research and scholarship, and service to the stake holders, the profession, and the public.</li>
+				<li>To prepare graduates to enter a rapidly changing field as a competent computer science engineer.</li>
+				<li>To prepare graduate capable in all phases of software development, possess a firm understanding of hardware technologies, have the strong mathematical background necessary for scientific computing, and be sufficiently well versed in general theory to allow growth within the discipline as it advances.</li>
+				<li>To prepare graduates to assume leadership roles by possessing good communication skills, the ability to work
+				 effectively as team members, and an appreciation for their social and ethical responsibility in a global 
+				 setting</li>
+				</ol></dd>
+			</dl></div>
 		</main>
+		
 	</div>
+	<section style="height:700px;margin:auto;background:#494646">END</section>
 </Layout>
 
 <script>
@@ -117,8 +146,8 @@ import images from "/logo.png"
 var bounding = elem.getBoundingClientRect();
 
 // Check if it's out of the viewport on each side
-var out = {};
-out.top = bounding.top < 0;
+var out = {"top":true};
+out.top = bounding.bottom < 0;
 out.left = bounding.left < 0;
 out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
 out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
@@ -130,7 +159,8 @@ return out;
 function logViewport(){
 	let ele = document.getElementsByTagName('nav')[0];
 	let tar = document.getElementsByClassName("side-nav")[0];
-	if(isOutOfViewport(ele).any){
+	
+	if(isOutOfViewport(ele).top){
 		tar.style.width = "300px"
 	}else{
 		tar.style.width = "0px"
@@ -140,22 +170,22 @@ window.addEventListener('scroll', logViewport, false);
 </script>
 
 <style>
-	li{
-
+	dh h2 {
+  font-size: 1.8rem;
+  background: -webkit-linear-gradient(#ffc061, #fc7303);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+	img{
+		width:100%;
+	}
+	.side-nav ul li{
 		padding: 1rem 20px 1rem 20px;
 	}
-	li:hover{
+	.side-nav ul li:hover{
 		background-color: red;
 	}
-	.logo{
-		margin: auto;
-	}
-	.logo-name{
-		color: #e8943a;
-		font-family: logoFont;
-		font-size: 20px;
-		display: inline-block;
-	}
+	
 	.container{
 		display: flex;
 	}
@@ -170,19 +200,18 @@ window.addEventListener('scroll', logViewport, false);
 		transition: width 0.3s;
 		transition-timing-function: ease-in;
 	}
-	img{
-		width: 100px;
-		mix-blend-mode: multiply;
-		display: inline-block;
-		vertical-align:top;
-	}
+	
 	a{
 		
 	}
 	main {
+		font-family: tfont;
+		font-size:1.2rem;
 		margin: auto;
+		text-align: justify;
 		padding: 1.5rem;
-		max-width: 60ch;
+		width: 70%;
+		max-width: 100ch;
 		height: 1000px;
 	}
 	nav{
@@ -195,10 +224,12 @@ window.addEventListener('scroll', logViewport, false);
 		justify-content:center;
 	}
 	.dept_title{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
 		text-align: center;
 		display: inline;
 		font-weight: 400;
-		font-family: 'Courier New', Courier, monospace;
+		font-family: math;/*'Courier New', Courier, monospace;*/
 	}
 	
 	.social-media{
@@ -252,8 +283,8 @@ window.addEventListener('scroll', logViewport, false);
 		color:white;
 	}
 	@font-face {
-		font-family: logoFont;
-		src: url('../../public/cloister_black/CloisterBlack.ttf');
+		font-family: tfont;
+		src: url('../../public/SairaCondensed-Regular.ttf');
 		}
 /* h1 {
 		background-color: white;
