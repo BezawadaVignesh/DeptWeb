@@ -8,31 +8,31 @@ import thinFont from '../../public/SairaCondensed-Regular.ttf'
 
 <Layout title="Welcome to Astro.">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<section>
-		
+<div class="hero">
+	<section style="position:sticky;top:0;z-index: 1;background-color: #f6f6f6;">
 		<div class="social-media">
-			<p class="d-flex align-items-center justify-content-center">
+			<p class="align-items-center justify-content-center">
 			<a href="#" >
 				<span class="fa fa-facebook">
 					<i class="sr-only">Facebook</i>
 				</span>
 			</a>
-			<a href="#" class="d-flex align-items-center justify-content-center">
+			<a href="#" class="align-items-center justify-content-center">
 				<span class="fa fa-twitter">
 					<i class="sr-only">Twitter</i>
 				</span>
 			</a>
-			<a href="#" class="d-flex align-items-center justify-content-center">
+			<a href="#" class="align-items-center justify-content-center">
 				<span class="fa fa-instagram">
 					<i class="sr-only">Instagram</i>
 				</span>
 			</a>
-			<a href="#" class="d-flex align-items-center justify-content-center">
+			<a href="#" class="align-items-center justify-content-center">
 				<span class="fa fa-youtube">
 					<i class="sr-only">Dribbble</i>
 				</span>
 			</a>
-			<a href="#" class="d-flex align-items-center justify-content-center">
+			<a href="#" class="align-items-center justify-content-center">
 				<span class="fa fa-linkedin">
 					<i class="sr-only">Dribbble</i>
 				</span>
@@ -56,7 +56,7 @@ import thinFont from '../../public/SairaCondensed-Regular.ttf'
 		<!-- <Logo /> -->
 	</section>
 	<div class="container">
-		<section class="side-nav">
+		<!-- <section class="side-nav">
 			<p>Department Of Computer Science and Engineering</p>
 			<hr>
 			<ul>
@@ -97,7 +97,7 @@ import thinFont from '../../public/SairaCondensed-Regular.ttf'
 				</a>
 				</p>
 			</div>
-		</section>
+		</section> -->
 		<main>
 			<!-- <img src={bggcet} ></img> -->
 			<Logo />
@@ -106,20 +106,20 @@ import thinFont from '../../public/SairaCondensed-Regular.ttf'
 			 intake of 240 students and 1 Post-Graduate program M.Tech in Computer Science and Engineering with an 
 			 annual intake of 30 students.
 
-			<br>The Department is Headed by Dr. A. Sri Lakshmi is having a total experience of 21 years in Teaching
+			</p><p>The Department is Headed by Dr. A. Sri Lakshmi is having a total experience of 21 years in Teaching
 			 and Research. Accomplished career demonstrating consistent success as an administrator and educator at
 			  the graduate and post-graduate education levels. She is an effective communicator with excellent planning,
 			   organizational, and negotiation strengths as well as the ability to lead, reach consensus, establish goals
 			    and attain results.
 
-			<br>There are 8 Professors, 15 Associate Professors, and 72 Assistant Professors
+			</p><p>There are 8 Professors, 15 Associate Professors, and 72 Assistant Professors
 			 and 16 doctorates in the department. The department has a Programmer and 5 System Administrators
 			  to assist and maintain the computer laboratories. All the faculty members are encouraged to participate
 			   in Faculty Development Programmes, Conferences, Workshops, Publication of Research Papers and active 
 			   involvement in R & D activity.</p>
-			   <div>
-				<dl>
-				<dh><h2>Vision and Mission</h2></dh><dd></dd>
+			   <div style="background-color: aquamarine;margin:1rem 0rem;border-radius: 10px;">
+				<dl style="padding:2rem;">
+				<dh><h2><u>Vision and Mission</u></h2></dh><dd></dd>
 				<dh><h3>Vision of the Department</h3></dh>
 				<dd><p>To produce globally competent and socially responsible computer science engineers contributing to the advancement of engineering and technology which involves creativity and innovation by providing excellent learning environment with world class facilities.
 				</p></dd>
@@ -133,10 +133,27 @@ import thinFont from '../../public/SairaCondensed-Regular.ttf'
 				 setting</li>
 				</ol></dd>
 			</dl></div>
+			<!-- <div style="background-color: aquamarine;margin:1rem 0rem;border-radius: 10px;">
+				<div>
+				<h2>Projects (Research Projects, Students Projects)</h2>
+				<p>The students who have completed their III year course work should undergo Industrial training for 45 days.
+					 The students in IV year IIsem will undergo 2 months regorows project development. The college has move
+					  with companies like ECIL, Ordinary solutions etc.</p>
+				<p>The students have to undergo development training and as well they have to produce individual or group projects.
+				The students groups will be formed consisting of 3 members, where one should be best, one is Average and the last is
+				 below Average intelligent students.</p>
+				 <p>The companies will be assessed by quality control team formed by college Q.C. in charge and based on the feedback
+					 the company either be allowed for future relationship or blacklisted.</p>
+			</div> -->
 		</main>
 		
 	</div>
-	<section style="height:700px;margin:auto;background:#494646">END</section>
+</div>
+
+
+<footer>
+	
+</footer>
 </Layout>
 
 <script>
@@ -146,7 +163,7 @@ import thinFont from '../../public/SairaCondensed-Regular.ttf'
 var bounding = elem.getBoundingClientRect();
 
 // Check if it's out of the viewport on each side
-var out = {"top":true};
+var out = {"top":true,"left":true,"bottom":true,"right":true,"any":true,"all":true};
 out.top = bounding.bottom < 0;
 out.left = bounding.left < 0;
 out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
@@ -156,25 +173,31 @@ out.all = out.top && out.left && out.bottom && out.right;
 return out;
 
 };
-function logViewport(){
-	let ele = document.getElementsByTagName('nav')[0];
-	let tar = document.getElementsByClassName("side-nav")[0];
-	
-	if(isOutOfViewport(ele).top){
-		tar.style.width = "300px"
-	}else{
-		tar.style.width = "0px"
-	}
-}
-window.addEventListener('scroll', logViewport, false);
+
 </script>
 
 <style>
+	@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+	.hero{
+		background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 28" width="56" height="28"%3E%3Cpath fill="%239C92AC" fill-opacity="0.2" d="M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z"%3E%3C/path%3E%3C/svg%3E');
+		background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.2"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+	}
+	
 	dh h2 {
   font-size: 1.8rem;
-  background: -webkit-linear-gradient(#ffc061, #fc7303);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  /* background: -webkit-linear-gradient(#ffc061, #fc7303); */
+  text-underline-position: under;
+  margin: 30px;
+}
+p{
+	padding: 10px 0px;
+}
+dh h3{
+	padding-bottom: 10px;
+}
+dd{
+	padding-left: 2rem;
 }
 	img{
 		width:100%;
@@ -201,23 +224,23 @@ window.addEventListener('scroll', logViewport, false);
 		transition-timing-function: ease-in;
 	}
 	
-	a{
-		
-	}
 	main {
-		font-family: tfont;
-		font-size:1.2rem;
+		
+		font-family: sans-serif;
+		font-size:16px;
+		line-height: 1.5rem;
 		margin: auto;
+		letter-spacing: 1px;
 		text-align: justify;
 		padding: 1.5rem;
 		width: 70%;
 		max-width: 100ch;
-		height: 1000px;
 	}
+	
 	nav{
 		background-color: black;
 		color: white;
-
+		border-radius: 0px 0px 10px 10px;
 	}
 	nav ul{
 		display: flex;
@@ -255,11 +278,15 @@ window.addEventListener('scroll', logViewport, false);
 		font-size: 15px;
 		aspect-ratio: 1/1;
 		border-radius: 50%;
-		box-shadow: 0 0 2px #888;
+		box-shadow: 0px 0px 3px 1px #888;
 		padding: 0.4em 0.65em;
 		margin: 0.5em;
 	}
-
+	.social-media p a:hover {
+		
+		box-shadow: -3px 2px 6px 1px #888;
+		
+	}
 	.social-media p a:has(.fa-youtube):hover {
 		background-color: red;
 		color:white;
@@ -286,8 +313,14 @@ window.addEventListener('scroll', logViewport, false);
 		font-family: tfont;
 		src: url('../../public/SairaCondensed-Regular.ttf');
 		}
-/* h1 {
-		background-color: white;
+	h2 {
+		text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
 		text-align: center;
-	} */
+	}
+	ul{
+		list-style: none;
+	}
 </style>

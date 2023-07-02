@@ -10,13 +10,33 @@ const { text } = Astro.props;
 </li>
 <style>
     .nav-ele a{
+        text-decoration: none;
         display: inline-flex;
-        padding: 1rem 20px 1rem 20px;
+        padding-bottom: 1rem;
+        position: relative;
     }
     .nav-ele {
-        list-style-type: none
+        padding: 1rem 20px 0rem 20px;
+        text-decoration: none;
+        position: relative;
     }
-    .nav-ele a:hover{
+    .nav-ele a::after{
+        content: '';
+        display: block;
+        height: 5px;
         background-color: red;
+
+        position: absolute;
+        bottom: 0;
+        width: 0%;
+
+        transition: all ease-in-out 250ms;
+    }
+    .nav-ele a:hover::after{
+        content: ' ';
+        /* position: absolute; */
+        background-color: red;
+        width: 100%;
+        overflow: hidden;
     }
 </style>
