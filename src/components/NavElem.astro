@@ -22,21 +22,24 @@ const { text } = Astro.props;
     }
     .nav-ele a::after{
         content: '';
-        display: block;
+        /* display: block; */
         height: 5px;
         background-color: red;
 
         position: absolute;
         bottom: 0;
-        width: 0%;
-
+        width: 100%;
+        transform: scale(0);
+        transform-origin: top center;
         transition: all ease-in-out 250ms;
     }
     .nav-ele a:hover::after{
         content: ' ';
         /* position: absolute; */
         background-color: red;
-        width: 100%;
+        /* width: 100%; */
+        transform: scale(1);
+
         overflow: hidden;
     }
 </style>
