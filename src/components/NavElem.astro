@@ -24,13 +24,22 @@ const { text } = Astro.props;
         content: '';
         display: block;
         height: 5px;
-        background-color: red;
+        background-color: black;
 
         position: absolute;
         bottom: 0;
         width: 0%;
 
         transition: all ease-in-out 250ms;
+    }
+    li:hover{
+        .nav-ele a:hover::after{
+            content: ' ';
+            /* position: absolute; */
+            background-color: red;
+            width: 100%;
+            overflow: hidden;
+        }
     }
     .nav-ele a:hover::after{
         content: ' ';
