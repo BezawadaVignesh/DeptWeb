@@ -2,7 +2,7 @@
 export interface Props {
 	title: string;
 }
-
+import NavElem from '../components/NavElem.astro';
 const { title } = Astro.props;
 ---
 
@@ -17,12 +17,58 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<section class="header">
+			<div class="social-media">
+				<p class="align-items-center justify-content-center">
+				<a href="#" >
+					<span class="fa fa-facebook">
+						<i class="sr-only">Facebook</i>
+					</span>
+				</a>
+				<a href="#" class="align-items-center justify-content-center">
+					<span class="fa fa-twitter">
+						<i class="sr-only">Twitter</i>
+					</span>
+				</a>
+				<a href="#" class="align-items-center justify-content-center">
+					<span class="fa fa-instagram">
+						<i class="sr-only">Instagram</i>
+					</span>
+				</a>
+				<a href="#" class="align-items-center justify-content-center">
+					<span class="fa fa-youtube">
+						<i class="sr-only">Dribbble</i>
+					</span>
+				</a>
+				<a href="#" class="align-items-center justify-content-center">
+					<span class="fa fa-linkedin">
+						<i class="sr-only">Dribbble</i>
+					</span>
+				</a>
+				</p>
+				<h1 class="dept_title">DEPARTMENT OF <br>COMPUTER SCIENCE AND ENGINEERING</h1>
+			</div>
+			
+			<nav>
+				<ul>
+					<NavElem text="Home" />
+					<NavElem text="About Us" />
+					<NavElem text="Contact" />
+					<NavElem text="Programs" />
+					<NavElem text="Events" />
+					<NavElem text="Faculaty" />
+					<NavElem text="Join US" />
+				</ul>
+			</nav>
+		</section>
 		<div>
 		<slot />
 		</div>
 	</body>
 </html>
 <style is:global>
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
@@ -31,15 +77,107 @@ const { title } = Astro.props;
 		margin: 0;
 		padding: 0;
 	}
+	@font-face {
+		font-family: tfont;
+		src: url('SairaCondensed-Regular.ttf');
+	}
 	html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
 	}
-	body{
-		insert 0;
-	}
+	
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+
+	.header{
+		position:sticky;
+		top:0;
+		z-index: 1;
+		background-color: #f6f6f6;
+	}
+
+	@media only screen and (max-width: 800px){
+		.header{
+			position: static;
+		}
+		.social-media{
+			flex-direction: column;
+			align-items: center;
+		}
+		ul{
+			flex-direction: column;
+		}
+		dd p{
+			padding: 0px;
+		}
+	}
+
+	.social-media{
+		display: flex;
+		justify-content: space-evenly;
+	}
+	
+	.social-media p{
+		display: inline-flex;
+		align-items: center;
+	}
+	.social-media p a {
+		text-decoration: none;
+		color: #4d4d4d;
+		font-size: 15px;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		box-shadow: 0px 0px 3px 1px #888;
+		padding: 0.4em 0.65em;
+		margin: 0.5em;
+	}
+	.social-media p a:hover {
+		
+		box-shadow: -3px 2px 6px 1px #888;
+		
+	}
+	.social-media p a:has(.fa-youtube):hover {
+		background-color: red;
+		color:white;
+	}
+	.social-media p a:has(.fa-facebook):hover {
+		background-color: #3b5998;
+		color:white;
+	}
+	.social-media p a:has(.fa-twitter):hover {
+		background-color: #1D9BF0;
+		color:white;
+	}
+	
+	.social-media p a:has(.fa-instagram):hover {
+		background:linear-gradient(-135deg, #405de6, #5851db, #833ab4, #c13584,
+		 #e1306c, #fd1d1d,#F56040, #F77737,#FCAF45, #FFDC80, #FFDC80);
+		color:white;
+	}
+	.social-media p a:has(.fa-linkedin):hover {
+		background:#0A66C2;
+		color:white;
+	}
+	.dept_title{
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		text-align: center;
+		display: inline;
+		font-weight: 400;
+		font-family: math;/*'Courier New', Courier, monospace;*/
+	}
+	
+	nav{
+		background-color: black;
+		color: white;
+		border-radius: 0px 0px 10px 10px;
+	}
+	nav ul{
+		list-style: none;
+		display: flex;
+		justify-content:center;
+	}
+
 </style>
