@@ -1,0 +1,47 @@
+{% extends "users/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% if not user.is_authenticated %}
+<div>
+    <div class="center text-center">
+        <h2>Login to view dashboard</h2><br>
+        <a class="btn btn-outline-dark" href="{% url 'login' %}">Login</a>
+    </div>
+</div>
+{% else %}
+
+<div class="container center" style="height:100%">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="content-section" style="background-color:#F9F9F9;height:100%">
+                <div class="media">
+                    <div class="media-body">
+                        <h2 class="account-heading">{{ user.username }}</h2>
+                        <p class="text-secondary">Email: {{ user.email }}</p>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a class="btn btn-outline-dark" href="{% url 'logout' %}">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endif %}
+</div>
+<style>
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+{% endblock content %}
