@@ -1,26 +1,37 @@
 ---
 export interface Props {
-	text: string
+	text: string,
+    link: string,
+    drop_link?: Array<Array<string>> 
 }
 
-const { text } = Astro.props;
+const { text, link, drop_link = [] } = Astro.props;
 ---
 <li class="nav-ele">
-    <a>{text}</a>
+    <a class='main-link' href={link}>{text}</a>
+    <div class="dropdown-content">
+        {drop_link.map((data) => {return <a href={data[0]}>{data[1]}</a>})}
+    </div>
 </li>
 <style>
-    .nav-ele a{
+    @media only screen and (max-width: 800px){
+        .nav-ele {
+            padding: 1rem 20px 0px 20px;
+        }
+    }
+    .main-link{
+        color: white;
         text-decoration: none;
         display: inline-flex;
         padding-bottom: 1rem;
         position: relative;
     }
     .nav-ele {
-        padding: 1rem 20px 0rem 20px;
+        padding-top: 1rem;
         text-decoration: none;
         position: relative;
     }
-    .nav-ele a::after{
+    .main-link::after{
         content: '';
         display: block;
         height: 5px;
@@ -33,7 +44,7 @@ const { text } = Astro.props;
         transition: all ease-in-out 250ms;
     }
     li:hover{
-        .nav-ele a:hover::after{
+        .nav-ele a::after{
             content: ' ';
             /* position: absolute; */
             background-color: red;
@@ -41,11 +52,33 @@ const { text } = Astro.props;
             overflow: hidden;
         }
     }
-    .nav-ele a:hover::after{
+    .main-link:hover::after{
         content: ' ';
         /* position: absolute; */
         background-color: red;
         width: 100%;
         overflow: hidden;
     }
+    
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.nav-ele:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 </style>

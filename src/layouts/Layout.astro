@@ -13,8 +13,7 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -53,13 +52,15 @@ const { title } = Astro.props;
 			
 			<nav>
 				<ul>
-					<NavElem text="Home" />
-					<NavElem text="About Us" />
-					<NavElem text="Contact" />
-					<NavElem text="Programs" />
-					<NavElem text="Events" />
-					<NavElem text="Faculaty" />
-					<NavElem text="Join US" />
+					<NavElem text="Home" link="/" />
+					<NavElem text="Syllabus" link="#" />
+					
+					<NavElem text="Programs" link="#" />
+					<NavElem text="Faculty"  link="/faculty-list" drop_link={[['hello', 'Link 1']]}/>
+					<NavElem text="Lab Details"  link="#" />
+					<NavElem text="Achievements"  link="#" />
+					<NavElem text="Projects"  link="#" />
+					<NavElem text="Seminars/Workshops"  link="#" />
 				</ul>
 			</nav>
 		</section>
@@ -114,8 +115,9 @@ const { title } = Astro.props;
 		dd p{
 			padding: 0px;
 		}
+		
 	}
-
+	
 	.social-media{
 		display: flex;
 		justify-content: space-evenly;
@@ -179,7 +181,7 @@ const { title } = Astro.props;
 	nav ul{
 		list-style: none;
 		display: flex;
-		justify-content:center;
+		justify-content:space-evenly;
 	}
 
 </style>
