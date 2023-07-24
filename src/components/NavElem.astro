@@ -8,16 +8,19 @@ export interface Props {
 const { text, link, drop_link = [] } = Astro.props;
 ---
 <li class="nav-ele">
+    <div style="display: flex;justify-content: space-between;flex-direction: row-reverse;">
+    <slot/>
+    
     <a class='main-link' href={link}>{text}</a>
+</div>
     <div class="dropdown-content">
         {drop_link.map((data) => {return <a href={data[0]}>{data[1]}</a>})}
     </div>
+
 </li>
 <style>
     @media only screen and (max-width: 800px){
-        .nav-ele {
-            padding: 1rem 20px 0px 20px;
-        }
+        
     }
     .main-link{
         color: white;
@@ -31,7 +34,7 @@ const { text, link, drop_link = [] } = Astro.props;
         text-decoration: none;
         position: relative;
     }
-    .main-link::after{
+    /* .main-link::after{
         content: '';
         display: block;
         height: 5px;
@@ -42,7 +45,7 @@ const { text, link, drop_link = [] } = Astro.props;
         width: 0%;
 
         transition: all ease-in-out 250ms;
-    }
+    } */
     li:hover{
         .nav-ele a::after{
             content: ' ';
@@ -52,13 +55,12 @@ const { text, link, drop_link = [] } = Astro.props;
             overflow: hidden;
         }
     }
-    .main-link:hover::after{
+    /* .main-link:hover::after{
         content: ' ';
-        /* position: absolute; */
         background-color: red;
         width: 100%;
         overflow: hidden;
-    }
+    } */
     
 
 .dropdown-content {
@@ -69,8 +71,16 @@ const { text, link, drop_link = [] } = Astro.props;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
 .nav-ele:hover .dropdown-content {
   display: block;
+}
+
+.nav-ele:hover {
+    background-color: #aaa7a0;
+    & > a{
+        color: white;
+    }
 }
 
 .dropdown-content a {
@@ -79,6 +89,6 @@ const { text, link, drop_link = [] } = Astro.props;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  text-align: right;
 }
 </style>
