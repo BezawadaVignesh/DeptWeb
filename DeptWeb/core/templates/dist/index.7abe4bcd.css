@@ -1,0 +1,338 @@
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #397524 #DFE9EB;
+  }
+  
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #DFE9EB;
+  }
+  
+  *::-webkit-scrollbar-track:hover {
+    background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-track:active {
+    background-color: #B8C0C2;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #397524;
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #62A34B;
+  }
+  
+  *::-webkit-scrollbar-thumb:active {
+    background-color: #62A34B;
+  }
+
+.mySlides:where(.astro-L5XUGZ5D) {
+    display: none
+}
+
+img:where(.astro-L5XUGZ5D) {
+    vertical-align: middle
+}
+
+.slideshow-container:where(.astro-L5XUGZ5D) {
+    max-width: 1000px;
+    position: relative;
+    margin: auto
+}
+
+.prev:where(.astro-L5XUGZ5D),
+.next:where(.astro-L5XUGZ5D) {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none
+}
+
+.next:where(.astro-L5XUGZ5D) {
+    right: 0;
+    border-radius: 3px 0 0 3px
+}
+
+.prev:where(.astro-L5XUGZ5D):hover,
+.next:where(.astro-L5XUGZ5D):hover {
+    background-color: #000c
+}
+
+.text:where(.astro-L5XUGZ5D) {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center
+}
+
+.numbertext:where(.astro-L5XUGZ5D) {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot:where(.astro-L5XUGZ5D) {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active:where(.astro-L5XUGZ5D),
+.dot:where(.astro-L5XUGZ5D):hover {
+    background-color: #717171
+}
+
+.fade:where(.astro-L5XUGZ5D) {
+    animation-name: fade;
+    animation-duration: 1.5s
+}
+
+@keyframes fade {
+    0% {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .prev:where(.astro-L5XUGZ5D),
+    .next:where(.astro-L5XUGZ5D),
+    .text:where(.astro-L5XUGZ5D) {
+        font-size: 11px
+    }
+}
+
+.card1:where(.astro-OW4IJ64F) {
+    width: 40%;
+    padding: 25px;
+    margin: 10px;
+    border: #6d5e5e;
+    border-width: thin;
+    border-style: solid
+}
+
+.card1:where(.astro-OW4IJ64F):hover {
+    font-size: large;
+    border-color: #d9d8d8;
+    box-shadow: -3px 5px 6px #624f4f
+}
+
+h2:where(.astro-OW4IJ64F) {
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px
+}
+
+h2:where(.astro-OW4IJ64F):after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50px;
+    background: #fa4e15
+}
+
+@media only screen and (max-width: 600px) {
+    .card1:where(.astro-OW4IJ64F) {
+        width: 80%
+    }
+}
+
+.vm-block:where(.astro-ATSQW6LG) {
+    background-color: var(--card1-color);
+    color: #fff;
+    margin: 5% 0%;
+    padding: 5%;
+    transform: skew(0, -2deg)
+}
+
+h2:where(.astro-ATSQW6LG) div:where(.astro-ATSQW6LG) {
+    text-align: center;
+    position: relative;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px
+}
+
+h2:where(.astro-ATSQW6LG) div:where(.astro-ATSQW6LG):after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50px;
+    background: #fa4e15
+}
+
+.c-block:where(.astro-J7PV25F6) {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: justify;
+    position: relative;
+
+    & h1:where(.astro-J7PV25F6):before {
+        position: absolute;
+        content: "";
+        height: 5px;
+        top: 0;
+        margin: 0 auto;
+        width: 50px;
+        background: #fa4e15
+    }
+}
+
+@keyframes text-shadow {
+    0% {
+        transform: translateY(0);
+        text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b
+    }
+
+    20% {
+        transform: translateY(-1em);
+        text-shadow: 0 .125em 0 #0c2ffb, 0 .25em 0 #2cfcfd, 0 -.125em 0 #fb203b, 0 -.25em 0 #fefc4b
+    }
+
+    40% {
+        transform: translateY(.5em);
+        text-shadow: 0 -.0625em 0 #0c2ffb, 0 -.125em 0 #2cfcfd, 0 .0625em 0 #fb203b, 0 .125em 0 #fefc4b
+    }
+
+    60% {
+        transform: translateY(-.25em);
+        text-shadow: 0 .03125em 0 #0c2ffb, 0 .0625em 0 #2cfcfd, 0 -.03125em 0 #fb203b, 0 -.0625em 0 #fefc4b
+    }
+
+    80% {
+        transform: translateY(0);
+        text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b
+    }
+}
+
+.hero:where(.astro-J7PV25F6) {
+    width: -webkit-fill-available;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.2"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')
+}
+
+ol:where(.astro-J7PV25F6) {
+    padding-left: 30px
+}
+
+h2:where(.astro-J7PV25F6) {
+    padding-bottom: 20px
+}
+
+.cardContainer:where(.astro-J7PV25F6) {
+    padding: 2rem 0rem;
+    text-align: left
+}
+
+p:where(.astro-J7PV25F6) {
+    padding: 10px 0
+}
+
+h3:where(.astro-J7PV25F6) {
+    padding-bottom: 10px
+}
+
+img:where(.astro-J7PV25F6) {
+    width: 100%
+}
+
+.side-nav:where(.astro-J7PV25F6) ul:where(.astro-J7PV25F6) li:where(.astro-J7PV25F6) {
+    padding: 1rem 20px
+}
+
+.side-nav:where(.astro-J7PV25F6) ul:where(.astro-J7PV25F6) li:where(.astro-J7PV25F6):hover {
+    background-color: red
+}
+
+.side-nav:where(.astro-J7PV25F6) {
+    background-color: #433b38;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: width .3s;
+    transition-timing-function: ease-in
+}
+
+main:where(.astro-J7PV25F6) {
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5rem;
+    margin: auto;
+    letter-spacing: 1px;
+    text-align: justify;
+    width: -webkit-fill-available;
+    max-width: 70%
+}
+
+h2:where(.astro-J7PV25F6) {
+    text-transform: uppercase;
+    font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0 auto
+}
+
+@media only screen and (max-width: 800px) {
+    .c-block:where(.astro-J7PV25F6) {
+        flex-wrap: wrap
+    }
+
+    .c-block:where(.astro-J7PV25F6) {
+        & img:where(.astro-J7PV25F6) {
+            width: 80% !important;
+            height: 80% !important
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    main:where(.astro-J7PV25F6) {
+        text-align: center
+    }
+}
+
+.nav-ele:where(.astro-J7PV25F6):hover {
+    background-color: #aaa7a0
+}

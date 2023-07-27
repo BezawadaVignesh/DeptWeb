@@ -25,6 +25,10 @@ SECRET_KEY = 'django-insecure-u$=t&t7h%q&#e^&0yw_03-!ctsv50=n%@&gt)&%6**-xt6tlbt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+
+
+
 ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = "users.CustomUser"
@@ -125,7 +129,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATIC_ROOT = BASE_DIR / "core/templates/dist/"
 
+STATICFILES_DIRS = [
+    BASE_DIR / "core/templates/dist/",
+]
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'images'
 
 LOGIN_REDIRECT_URL = '/home'
 
