@@ -20,7 +20,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		
-		<section class="header">
+		<section class="header" style="box-shadow: 0px 2px 9px 1px rgb(25 25 25 / 28%);border-radius: 0px 0px 10px 10px;">
 			<div class="social-media">
 				<Logo />
 				<p class="align-items-center justify-content-center">
@@ -75,7 +75,48 @@ const { title } = Astro.props;
 <style is:global>
 		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #DFE9EB;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #4d4e4c;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #626462;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #000000;
+}
+
 	:root {
+		--navbar-color : #000000;
+		--navbar-font-color : #ffffff;
+		--card1-color: rgb(28, 30, 36);
+		--card1-font-color: ;
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
@@ -181,8 +222,8 @@ const { title } = Astro.props;
 	}
 	
 	nav{
-		background-color: black;
-		color: white;
+		background-color: var(--navbar-color);
+		color: var(--navbar-font-color);
 		border-radius: 0px 0px 10px 10px;
 	}
 	nav ul{
@@ -190,5 +231,25 @@ const { title } = Astro.props;
 		display: flex;
 		justify-content:space-evenly;
 	}
+
+	.main-link:hover::after{
+        content: ' ';
+        background-color: red;
+        width: 100%;
+        overflow: hidden;
+    }
+
+	.main-link::after{
+        content: '';
+        display: block;
+        height: 5px;
+        background-color: black;
+
+        position: absolute;
+        bottom: 0;
+        width: 0%;
+
+        transition: all ease-in-out 250ms;
+    }
 
 </style>

@@ -1,98 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Layout2 from '../layouts/Layout2.astro';
-import Logo from '../components/Logo.astro';
-import ImgSlide from '../components/ImgSlide.astro';
-import bggcet from '/images.png'
-import thinFont from '../../public/SairaCondensed-Regular.ttf'
+import Layout from "../layouts/Layout.astro";
+import Layout2 from "../layouts/Layout2.astro";
+import Logo from "../components/Logo.astro";
+import Announcements from '../components/Announcements.astro'
+import ImgSlide from "../components/ImgSlide.astro";
+import VMBlock from "../components/VMBlock.astro";
+import bggcet from "/images.png";
+import thinFont from "../../public/SairaCondensed-Regular.ttf";
+import Card1 from "../components/Card1.astro";
 ---
 
-<Layout2 title="Geethanjali College of Engineering and Tech (CSE)">
-	
-<div class="hero">
-	
-	<div class="container">
-		<!-- <section class="side-nav">
-			<p>Department Of Computer Science and Engineering</p>
-			<hr>
-			<ul>
-				<li><a>Home</a></li>
-				<li><a>About Us</a></li>
-				<li><a>Contact</a></li>
-				<li><a>Programs</a></li>
-				<li><a>Events</a></li>
-				<li><a>Faculaty</a></li>
-				<li><a>Join US</a></li>
-			</ul>
-			<div class="social-media">
-				<p class="d-flex align-items-center justify-content-center">
-				<a href="#" >
-					<span class="fa fa-facebook">
-						<i class="sr-only">Facebook</i>
-					</span>
-				</a>
-				<a href="#" class="d-flex align-items-center justify-content-center">
-					<span class="fa fa-twitter">
-						<i class="sr-only">Twitter</i>
-					</span>
-				</a>
-				<a href="#" class="d-flex align-items-center justify-content-center">
-					<span class="fa fa-instagram">
-						<i class="sr-only">Instagram</i>
-					</span>
-				</a>
-				<a href="#" class="d-flex align-items-center justify-content-center">
-					<span class="fa fa-youtube">
-						<i class="sr-only">Dribbble</i>
-					</span>
-				</a>
-				<a href="#" class="d-flex align-items-center justify-content-center">
-					<span class="fa fa-linkedin">
-						<i class="sr-only">Dribbble</i>
-					</span>
-				</a>
-				</p>
-			</div>
-		</section> -->
-		<main>
-			<!-- <img src={bggcet} ></img> -->
-			<!-- <Logo /> -->
-			<h3 style="font-weight: 100;text-align: center;">HOME</h3>
-			<hr><br>
-			<ImgSlide/>
-			<p> The Department of Computer Science and Engineering was established in the year 2005 and currently the
-			 department offers an Under Graduate program B.Tech in Computer Science and Engineering with an annual 
-			 intake of 240 students and 1 Post-Graduate program M.Tech in Computer Science and Engineering with an 
-			 annual intake of 30 students.
+<Layout title="Geethanjali College of Engineering and Tech (CSE)">
+  <div class="hero">
+    <div class="container">
+      <main>
+        <!-- <img src={bggcet} ></img> -->
+        <!-- <Logo /> -->
+        <h3 style="font-weight: 100;text-align: center;">HOME</h3>
+        <hr /><br />
+        <ImgSlide />
+        <Announcements></Announcements>
+        <p>
+          The Department of Computer Science and Engineering was established in
+          the year 2005 and currently the department offers an Under Graduate
+          program B.Tech in Computer Science and Engineering with an annual
+          intake of 240 students and 1 Post-Graduate program M.Tech in Computer
+          Science and Engineering with an annual intake of 30 students.
+        </p><p>
+          The Department is Headed by Dr. A. Sri Lakshmi is having a total
+          experience of 21 years in Teaching and Research. Accomplished career
+          demonstrating consistent success as an administrator and educator at
+          the graduate and post-graduate education levels. She is an effective
+          communicator with excellent planning, organizational, and negotiation
+          strengths as well as the ability to lead, reach consensus, establish
+          goals and attain results.
+        </p><p>
+          There are 8 Professors, 15 Associate Professors, and 72 Assistant
+          Professors and 16 doctorates in the department. The department has a
+          Programmer and 5 System Administrators to assist and maintain the
+          computer laboratories. All the faculty members are encouraged to
+          participate in Faculty Development Programmes, Conferences, Workshops,
+          Publication of Research Papers and active involvement in R & D
+          activity.
+        </p>
 
-			</p><p>The Department is Headed by Dr. A. Sri Lakshmi is having a total experience of 21 years in Teaching
-			 and Research. Accomplished career demonstrating consistent success as an administrator and educator at
-			  the graduate and post-graduate education levels. She is an effective communicator with excellent planning,
-			   organizational, and negotiation strengths as well as the ability to lead, reach consensus, establish goals
-			    and attain results.
-
-			</p><p>There are 8 Professors, 15 Associate Professors, and 72 Assistant Professors
-			 and 16 doctorates in the department. The department has a Programmer and 5 System Administrators
-			  to assist and maintain the computer laboratories. All the faculty members are encouraged to participate
-			   in Faculty Development Programmes, Conferences, Workshops, Publication of Research Papers and active 
-			   involvement in R & D activity.</p>
-			   <div class="cardContainer" style="background-color: aquamarine;margin:1rem 0rem;border-radius: 10px;">
-				
-				<h2><div>Vision and Mission</div></h2>
-				<h3>Vision of the Department</h3>
-				<p>To produce globally competent and socially responsible computer science engineers contributing to the advancement of engineering and technology which involves creativity and innovation by providing excellent learning environment with world class facilities.
-				</p>
-				<h3>Mission of the Department</h3>
-				<ol>
-				<li>To be a centre of excellence in instruction, innovation in research and scholarship, and service to the stake holders, the profession, and the public.</li>
-				<li>To prepare graduates to enter a rapidly changing field as a competent computer science engineer.</li>
-				<li>To prepare graduate capable in all phases of software development, possess a firm understanding of hardware technologies, have the strong mathematical background necessary for scientific computing, and be sufficiently well versed in general theory to allow growth within the discipline as it advances.</li>
-				<li>To prepare graduates to assume leadership roles by possessing good communication skills, the ability to work
-				 effectively as team members, and an appreciation for their social and ethical responsibility in a global 
-				 setting</li>
-				</ol>
-			</div>
-			<!-- <div style="background-color: aquamarine;margin:1rem 0rem;border-radius: 10px;">
+        <!-- <div style="background-color: aquamarine;margin:1rem 0rem;border-radius: 10px;">
 				<div>
 				<h2>Projects (Research Projects, Students Projects)</h2>
 				<p>The students who have completed their III year course work should undergo Industrial training for 45 days.
@@ -104,143 +56,398 @@ import thinFont from '../../public/SairaCondensed-Regular.ttf'
 				 <p>The companies will be assessed by quality control team formed by college Q.C. in charge and based on the feedback
 					 the company either be allowed for future relationship or blacklisted.</p>
 			</div> -->
-		</main>
-		
-	</div>
-</div>
+      </main>
+      <VMBlock/>
+      <div class="c-block"  style="min-height: 300px;margin:10% 0% 10% 0%">
+        <img src="chairman.jpg" alt="chairman sir" style="padding:20px;width: 35%;height:35%">
+        <div style="padding: 20px; margin-right:40px;:">
+          <h1>Mr.G.R.Ravinder Reddy</h1>
+          <h2>Chairman & Director,</h2>
+          <p><b>Email :</b> grreddy@gcet.edu.in</p>
+          <p>Geethanjali College of Engineering and Technology.</p>
 
+          <p>Mr.G.R.Ravinder Reddy, an alumnus of NIT Warangal having done both his B.Tech and M.Tech from it.
+            
+            After completion of his post graduation he had served in the state engineering department for 6 years.
+            Later he joined the police department in direct recruitment as Deputy Superintendent of Police and was
+            elevated to the post of Superintendent of Police. During the training at Police Academy he was adjudged
+            as Best Probationer and was awarded Chief Minister's Pistol and also Home Minister's Baton. He worked
+            successfully in several assignments in law and order, traffic and training wings in the A.P police.
+             As a former senior police officer with a technical background he visualized to set up an Institution
+              of learning where future engineers can be moulded. He uses his expertise, experience and exposure in
+               crafting technocrats with enhanced employability. He is the driving force behind Geetanjali who steers the college towards the heights of technical and human excellence. His expertise and acumen navigate the college through the challenging world and help it reach its goal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<footer>
-	
-</footer>
-</Layout2>
+  <section class="triangle"></section>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> -->
+  <footer class="section bg-footer">
+  <div class="container">
+  <div class="row" style="display: flex;flex-wrap: wrap;justify-content: space-evenly;">
+  <div class="col-lg-3" style="width: 180px;padding-top: 50px;">
+  <div class="">
+  <h6 class="footer-heading text-uppercase text-white">Information</h6>
+  <ul class="list-unstyled footer-link mt-4" style="text-decoration: none;list-style: none;">
+  <li><a href="">Pages</a></li>
+  <li><a href="">Our Team</a></li>
+  <li><a href="">Feuchers</a></li>
+  <li><a href="">Pricing</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="footer-block" style="width: 180px;padding-top: 50px;">
+  <div class="">
+  <h6 class="footer-heading text-uppercase text-white">Ressources</h6>
+  <ul class="list-unstyled footer-link mt-4" style="text-decoration: none;list-style: none;">
+  <li><a href="">Monitoring Grader </a></li>
+  <li><a href="">Video Tutorial</a></li>
+  <li><a href="">Term &amp; Service</a></li>
+  <li><a href="">Zeeko API</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-lg-2" style="width: 180px;padding-top: 50px;">
+  <div class="">
+  <h6 class="footer-heading text-uppercase text-white">Help</h6>
+  <ul class="list-unstyled footer-link mt-4" style="text-decoration: none;list-style: none;">
+  <li><a href="">Sign Up </a></li>
+  <li><a href="">Login</a></li>
+  <li><a href="">Terms of Services</a></li>
+  <li><a href="">Privacy Policy</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-lg-4" style="width: 180px;padding-top: 50px;">
+  <div class="">
+  <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
+  <p class="contact-info mt-4" style="padding-top: 10px;">Cheeryala(V),
+    Keesara(M), Medchal Dist.<br>
+    Telangana,INDIA<br>
+    Pin Code-501301.
+    </p>
+  <p class="contact-info" style="padding-bottom: 20px;padding-top: 10px;">info@gcet.edu.in</p>
+  <div class="mt-5">
+  <ul class="list-inline" style="display: flex;text-decoration: none;list-style: none;justify-content: space-evenly;">
+  <li class="list-inline-item"><a href="#"><i class="fa facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+  <li class="list-inline-item"><a href="#"><i class="fa twitter footer-social-icon fa-twitter"></i></i></a></li>
+  <li class="list-inline-item"><a href="#"><i class="fa google footer-social-icon fa-google"></i></i></a></li>
+  <li class="list-inline-item"><a href="#"><i class="fa apple footer-social-icon fa-apple"></i></i></a></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="text-center mt-5" style="text-align: center;padding-top: 20px;">
+  <p class="footer-alt mb-0 f-14">2023 © Department of CSE, GCET, All Rights Reserved</p>
+  </div>
+  </footer>
+  </div>
+
+  <footer class="astro-J7PV25F6"></footer>
+  
+  <style>
+    .triangle {
+  position: relative;
+  background: #ff6a25;
+  height: 7vh;
+}
+
+.triangle::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 50px;
+  border-color: #ff6a25 transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+    /* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #DFE9EB;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #4d4e4c;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #626462;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #000000;
+}
+
+    .bg-footer {
+background-color: #33383c;
+padding: 50px 0 30px;
+}
+.footer-heading {
+letter-spacing: 2px;
+font-size: larger;
+color: #ffffff;
+}
+.footer-link a {
+  text-decoration: none;
+color: #acacac;
+line-height: 40px;
+font-size: 14px;
+transition: all 0.5s;
+}
+.footer-link a:hover {
+color: #dde9e6;
+}
+.contact-info {
+color: #acacac;
+font-size: 14px;
+}
+.footer-social-icon {
+font-size: 15px;
+height: 34px;
+width: 34px;
+line-height: 34px;
+border-radius: 3px;
+text-align: center;
+display: inline-block;
+}
+.facebook {
+background-color: #4e71a8;
+color: #ffffff;
+}
+.twitter {
+background-color: #55acee;
+color: #ffffff;
+}
+.google {
+background-color: #d6492f;
+color: #ffffff;
+}
+.apple {
+background-color: #424041;
+color: #ffffff;
+}
+.footer-alt {
+color: #acacac;
+}
+.footer-heading {
+position: relative;
+padding-bottom: 12px;
+}
+.footer-heading:after {
+content: '';
+width: 25px;
+border-bottom: 1px solid #FFF;
+position: absolute;
+left: 0;
+bottom: 0;
+display: block;
+border-bottom: 1px solid #1bbc9b;
+}
+  </style>
+</Layout>
 
 <script>
-	var isOutOfViewport = function (elem:any) {
+  var isOutOfViewport = function (elem: any) {
+    // Get element's bounding
+    var bounding = elem.getBoundingClientRect();
 
-// Get element's bounding
-var bounding = elem.getBoundingClientRect();
-
-// Check if it's out of the viewport on each side
-var out = {"top":true,"left":true,"bottom":true,"right":true,"any":true,"all":true};
-out.top = bounding.bottom < 0;
-out.left = bounding.left < 0;
-out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
-out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
-out.any = out.top || out.left || out.bottom || out.right;
-out.all = out.top && out.left && out.bottom && out.right;
-return out;
-
-};
-
+    // Check if it's out of the viewport on each side
+    var out = {
+      top: true,
+      left: true,
+      bottom: true,
+      right: true,
+      any: true,
+      all: true,
+    };
+    out.top = bounding.bottom < 0;
+    out.left = bounding.left < 0;
+    out.bottom =
+      bounding.bottom >
+      (window.innerHeight || document.documentElement.clientHeight);
+    out.right =
+      bounding.right >
+      (window.innerWidth || document.documentElement.clientWidth);
+    out.any = out.top || out.left || out.bottom || out.right;
+    out.all = out.top && out.left && out.bottom && out.right;
+    return out;
+  };
 </script>
 
-
 <style>
-	.hero{
-		width: -webkit-fill-available;
-		background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 28" width="56" height="28"%3E%3Cpath fill="%239C92AC" fill-opacity="0.2" d="M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z"%3E%3C/path%3E%3C/svg%3E');
-		background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.2"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-	}
-	h2 {
-		text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  .c-block {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: justify;
+    position: relative;
+      & h1:before {
+      position: absolute;
+      content: "";
+      height: 5px;
+      top: 0px;
+      margin: 0 auto;
+      width: 50px;
+      background: #fa4e15;
+    }
+  }
+  @keyframes text-shadow {
+    0% {
+      transform: translateY(0);
+      text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+    }
+
+    20% {
+      transform: translateY(-1em);
+      text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b,
+        0 -0.25em 0 #fefc4b;
+    }
+
+    40% {
+      transform: translateY(0.5em);
+      text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd,
+        0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+    }
+
+    60% {
+      transform: translateY(-0.25em);
+      text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd,
+        0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {
+      transform: translateY(0);
+      text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+    }
+  }
+
+  .hero {
+    width: -webkit-fill-available;
+    /* background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 28" width="56" height="28"%3E%3Cpath fill="%239C92AC" fill-opacity="0.2" d="M56 26v2h-7.75c2.3-1.27 4.94-2 7.75-2zm-26 2a2 2 0 1 0-4 0h-4.09A25.98 25.98 0 0 0 0 16v-2c.67 0 1.34.02 2 .07V14a2 2 0 0 0-2-2v-2a4 4 0 0 1 3.98 3.6 28.09 28.09 0 0 1 2.8-3.86A8 8 0 0 0 0 6V4a9.99 9.99 0 0 1 8.17 4.23c.94-.95 1.96-1.83 3.03-2.63A13.98 13.98 0 0 0 0 0h7.75c2 1.1 3.73 2.63 5.1 4.45 1.12-.72 2.3-1.37 3.53-1.93A20.1 20.1 0 0 0 14.28 0h2.7c.45.56.88 1.14 1.29 1.74 1.3-.48 2.63-.87 4-1.15-.11-.2-.23-.4-.36-.59H26v.07a28.4 28.4 0 0 1 4 0V0h4.09l-.37.59c1.38.28 2.72.67 4.01 1.15.4-.6.84-1.18 1.3-1.74h2.69a20.1 20.1 0 0 0-2.1 2.52c1.23.56 2.41 1.2 3.54 1.93A16.08 16.08 0 0 1 48.25 0H56c-4.58 0-8.65 2.2-11.2 5.6 1.07.8 2.09 1.68 3.03 2.63A9.99 9.99 0 0 1 56 4v2a8 8 0 0 0-6.77 3.74c1.03 1.2 1.97 2.5 2.79 3.86A4 4 0 0 1 56 10v2a2 2 0 0 0-2 2.07 28.4 28.4 0 0 1 2-.07v2c-9.2 0-17.3 4.78-21.91 12H30zM7.75 28H0v-2c2.81 0 5.46.73 7.75 2zM56 20v2c-5.6 0-10.65 2.3-14.28 6h-2.7c4.04-4.89 10.15-8 16.98-8zm-39.03 8h-2.69C10.65 24.3 5.6 22 0 22v-2c6.83 0 12.94 3.11 16.97 8zm15.01-.4a28.09 28.09 0 0 1 2.8-3.86 8 8 0 0 0-13.55 0c1.03 1.2 1.97 2.5 2.79 3.86a4 4 0 0 1 7.96 0zm14.29-11.86c1.3-.48 2.63-.87 4-1.15a25.99 25.99 0 0 0-44.55 0c1.38.28 2.72.67 4.01 1.15a21.98 21.98 0 0 1 36.54 0zm-5.43 2.71c1.13-.72 2.3-1.37 3.54-1.93a19.98 19.98 0 0 0-32.76 0c1.23.56 2.41 1.2 3.54 1.93a15.98 15.98 0 0 1 25.68 0zm-4.67 3.78c.94-.95 1.96-1.83 3.03-2.63a13.98 13.98 0 0 0-22.4 0c1.07.8 2.09 1.68 3.03 2.63a9.99 9.99 0 0 1 16.34 0z"%3E%3C/path%3E%3C/svg%3E');
+    */background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.2"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); 
+  }
+  h2 {
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-	margin: 0 auto;
-		/* text-align: center; */
-	}
-ol{
-	padding-left: 30px;
-}
+    margin: 0 auto;
+    /* text-align: center; */
+  }
+  ol {
+    padding-left: 30px;
+  }
 
-h2 div{
-  text-align: center;
-  margin: 30px auto;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-  /* background: -webkit-linear-gradient(#ffc061, #fc7303); */
-  text-underline-position: under;
-  position: relative;
-  padding-bottom: 20px;
+  h2 {
+    padding-bottom: 20px;
+  }
+
   
-}
 
-.cardContainer {
-	padding:2rem;
-	text-align: left;
-}
+  .cardContainer {
+    padding: 2rem 0rem 2rem 0rem;
+    text-align: left;
+  }
 
-h2 div::after{
-	content: '';
-	display: block;
-	width: 75%;
-	height: 4px;
-	border-radius: 2px;
-	left: 10%;
-	background-color: black;
+  p {
+    padding: 10px 0px;
+  }
+  h3 {
+    padding-bottom: 10px;
+  }
+  img {
+    width: 100%;
+  }
+  .side-nav ul li {
+    padding: 1rem 20px 1rem 20px;
+  }
+  .side-nav ul li:hover {
+    background-color: red;
+  }
 
-	position: absolute;
-	bottom: 0;
-}
+  .container {
+    /* display: flex; */
+  }
+  .side-nav {
+    background-color: #433b38;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.3s;
+    transition-timing-function: ease-in;
+  }
 
-p{
-	padding: 10px 0px;
-}
-h3{
-	padding-bottom: 10px;
-}
-	img{
-		width:100%;
-	}
-	.side-nav ul li{
-		padding: 1rem 20px 1rem 20px;
-	}
-	.side-nav ul li:hover{
-		background-color: red;
-	}
-	
-	.container{
-		display: flex;
-	}
-	.side-nav{
-		background-color: #433b38;
-		color: white;
-		position: sticky;
-		top:0;
-		width: 0;
-		height: 100vh;
-		overflow: hidden;
-		transition: width 0.3s;
-		transition-timing-function: ease-in;
-	}
-	
-	main {
-		padding: 10px;
-		font-family: sans-serif;
-		font-size:14px;
-		line-height: 1.5rem;
-		margin: auto;
-		letter-spacing: 1px;
-		text-align: justify;
-		width: -webkit-fill-available;
-		max-width: min(70vw, 90vw);
-	}
-	
-	
-	h2 {
-		text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  main {
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1.5rem;
+    margin: auto;
+    letter-spacing: 1px;
+    text-align: justify;
+    width: -webkit-fill-available;
+    max-width: 70%; /*min(70vw, 90vw);*/
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-	margin: 0 auto;
-		/* text-align: center; */
-	}
+    margin: 0 auto;
+    /* text-align: center; */
+  }
 
-	@media only screen and (max-width: 400px){
-		main {
-			text-align: center;
-		}
-	}
-	
+  @media only screen and (max-width: 800px) {
+    .c-block{
+    flex-wrap: wrap;
+    }
+    .c-block{
+      & img{
+        width: 80% !important;
+        height: 80% !important;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    main {
+      text-align: center;
+    }
+    
+  }
+
+
+  .nav-ele:hover {
+    background-color: #aaa7a0;
+  }
 </style>

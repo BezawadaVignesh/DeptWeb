@@ -1,0 +1,46 @@
+---
+export interface Props {
+	head: string
+}
+const {head} = Astro.props;
+---
+<div class="card1">
+    <h2>{head} </h2>
+    <slot/>
+</div>
+<style>
+    .card1{
+        width: 40%;
+        padding: 25px;
+        margin: 10px;
+    border: #6d5e5e;
+    border-width: thin;
+    border-style: solid;
+    }
+    .card1:hover{
+        font-size: large;
+        border-color: #d9d8d8;
+        box-shadow: -3px 5px 6px rgb(98, 79, 79);
+    }
+    h2{
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    h2::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50px;
+    background: #fa4e15;
+}
+@media only screen and (max-width: 600px) {
+    .card1{
+        width: 80%;
+    }
+  }
+</style>

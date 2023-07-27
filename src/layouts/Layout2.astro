@@ -53,13 +53,13 @@ const { title } = Astro.props;
 				<!--h1 class="dept_title">DEPARTMENT OF <br>COMPUTER SCIENCE AND ENGINEERING</h1-->
 			</div>
 		</section>
-		<!-- <div class="menu-button" onclick="this.classList.toggle('change');">
-        <button style="position: sticky;top:0" onclick="let obj = document.getElementsByTagName('nav')[0];if(obj.style.display == 'none'){obj.style.display = 'block'}else{
-            obj.style.display = 'none';}">=</button> 
+		<div class="menu-button" onclick="this.classList.toggle('change');let obj = document.getElementsByTagName('nav')[0];if(obj.style.display != 'block'){obj.style.display = 'block'}else{obj.style.display = 'none'}">
+        <!-- <button style="position: sticky;top:0" onclick="let obj = document.getElementsByTagName('nav')[0];if(obj.style.display == 'none'){obj.style.display = 'block'}else{ -->
+            <!-- obj.style.display = 'none';}">=</button>  -->
 			<div class="bar1"></div>
 			<div class="bar2"></div>
 			<div class="bar3"></div>
-		</div> -->
+		</div>
 		<div class="main">
             <nav>
 				<ul>
@@ -79,14 +79,27 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style>
+	@keyframes slidein {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 300px;
+  }
+}
     .main {
         display: flex;
         & nav {
             position: sticky;
             top: 100px;
             height: calc( 100vh - 100px);
-            background-color: black;/*rgb(77, 73, 73);*/
+            background-color: var(--navbar-color);/*rgb(77, 73, 73);*/
             color: white;
+			width: 300px;
+			animation-duration: 0.5s;
+  animation-name: slidein;
+
             /* border-radius: 10px 10px 10px 10px; */
         }
         & nav ul{
@@ -121,9 +134,9 @@ const { title } = Astro.props;
 		}
 
 		.change .bar2 {opacity: 0;}
-		.change{
+		/* .change{
 			display: block;
-		}
+		} */
 		.change .bar3 {
 		transform: translate(0, -11px) rotate(45deg);
 		}
@@ -133,12 +146,15 @@ const { title } = Astro.props;
 		height: 30px;
         display: none;
     } */
+	.menu-button{
+		display: none;
+	}
 	@media only screen and (max-width: 400px){
-		button {
+		.menu-button {
 			display: block;
 		}
 		.main nav{
-			display:none
+			display:none;
 		}
 	}
 </style>
@@ -147,6 +163,9 @@ const { title } = Astro.props;
 		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 	:root {
+		--navbar-color : #000000;
+		--navbar-font-color : #ffffff;
+		--card1-color: rgb(28, 30, 36);
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
@@ -178,6 +197,7 @@ const { title } = Astro.props;
 	@media only screen and (max-width: 800px){
 		.header{
 			position: static;
+			width: 100%;
 		}
 		.social-media{
 			flex-direction: column;

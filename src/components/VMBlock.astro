@@ -1,0 +1,120 @@
+---
+import Card1 from "./Card1.astro";
+---
+<div class="vm-block">
+    <div
+      class="cardContainer"
+      style="transform:skew(0, 2deg);/*margin:auto;border-radius: 10px;width:75%*/"
+    >
+      <h2><div>Vision and Mission</div></h2>
+      <div
+        style="display: flex;flex-wrap: wrap;justify-content: space-evenly;font-weight: 200;"
+      >
+        <Card1 head="Vision of the Department">
+          <p>
+            To produce globally competent and socially responsible computer
+            science engineers contributing to the advancement of engineering
+            and technology which involves creativity and innovation by
+            providing excellent learning environment with world class
+            facilities.
+          </p>
+        </Card1><Card1 head="Mission of the Department">
+          <ol style="list-style-type: none">
+            <li>
+              <img
+                class="styled__Bullet-sc-bebnhe-16 jIUIUd home"
+                style="color:display: block;
+        margin-right: 20px;
+        height: 8px;width :8px"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAfSURBVHgB3coxAQAACALB16r2z4ANYOfmGx3CWIKO8HetAnEdjRLfAAAAAElFTkSuQmCC"
+                alt="bullet"
+              />
+
+              To be a centre of excellence in instruction, innovation in
+              research and scholarship, and service to the stake holders,
+              the profession, and the public.
+            </li>
+            <li>
+              <img
+                class="styled__Bullet-sc-bebnhe-16 jIUIUd home"
+                style="color:display: block;
+        margin-right: 20px;
+        height: 8px;width :8px"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAfSURBVHgB3coxAQAACALB16r2z4ANYOfmGx3CWIKO8HetAnEdjRLfAAAAAElFTkSuQmCC"
+                alt="bullet"
+              />
+
+              To prepare graduates to enter a rapidly changing field as a
+              competent computer science engineer.
+            </li>
+            <li>
+              <img
+                class="styled__Bullet-sc-bebnhe-16 jIUIUd home"
+                style="color:display: block;
+        margin-right: 20px;
+        height: 8px;width :8px"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAfSURBVHgB3coxAQAACALB16r2z4ANYOfmGx3CWIKO8HetAnEdjRLfAAAAAElFTkSuQmCC"
+                alt="bullet"
+              />
+
+              To prepare graduate capable in all phases of software
+              development, possess a firm understanding of hardware
+              technologies, have the strong mathematical background
+              necessary for scientific computing, and be sufficiently well
+              versed in general theory to allow growth within the discipline
+              as it advances.
+            </li>
+            <li>
+              <img
+                class="styled__Bullet-sc-bebnhe-16 jIUIUd home"
+                style="color:display: block;
+        margin-right: 20px;
+        height: 8px;width :8px"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAfSURBVHgB3coxAQAACALB16r2z4ANYOfmGx3CWIKO8HetAnEdjRLfAAAAAElFTkSuQmCC"
+                alt="bullet"
+              />
+
+              To prepare graduates to assume leadership roles by possessing
+              good communication skills, the ability to work effectively as
+              team members, and an appreciation for their social and ethical
+              responsibility in a global setting
+            </li>
+          </ol>
+        </Card1>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .vm-block{
+    background-color: var(--card1-color);
+    color:white;
+    margin: 5% 0% 5% 0%;
+    padding: 5%; 
+      transform: skew(0, -2deg);
+  }
+
+  h2 div {
+    text-align: center;
+    /* margin: 30px auto; */
+    position: relative;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    /* background: -webkit-linear-gradient(#ffc061, #fc7303); */
+    /* text-underline-position: under;
+    position: relative;*/
+    margin-bottom: 20px; 
+  }
+
+  h2 div:after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    bottom: -10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 50px;
+    background: #fa4e15;
+  }
+  </style>
