@@ -22,7 +22,7 @@
         <div class="logo-name astro-TVRURPNS">
             
             <div style="/*text-align: right;*/" class="astro-TVRURPNS"><!--i>... Starving towards perfection</i-->DEPARTMENT OF COMPUTER SCIENCE</div>
-			<h2 class="astro-TVRURPNS">Geethangali college of engineering and technology</h2>
+			<h2 class="astro-TVRURPNS">Geethanjali College of Engineering and Technology</h2>
         </div>
 		
     </div>
@@ -225,6 +225,25 @@
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
+    }
+    let slideIndexAuto = 0;
+    displayImages();
+    function displayImages() {
+      let images = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (let i = 0; i < images.length; i++) {
+        images[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slideIndexAuto++;
+      if (slideIndexAuto > images.length) {
+        slideIndexAuto = 1;
+      }
+      images[slideIndexAuto-1].style.display = "block";
+      dots[slideIndexAuto-1].className += " active";
+      setTimeout(displayImages, 2500); 
     }
 </script>
         
